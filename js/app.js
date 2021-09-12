@@ -25,7 +25,7 @@ const showProducts = (products) => {
       <p><i class="fas fa-star text-warning"></i> ${product.rating.rate} &nbsp &nbsp &nbsp &nbsp <i class="fas fa-user-check text-primary"></i> ${product.rating.count} </p>
    
 
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">Add to Cart</button> <br>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button> <br>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
      
       `;
@@ -43,6 +43,7 @@ const addToCart = (id, price) => {
 };
 
 const getInputValue = (id) => {
+  const element = document.getElementById(id).innerText;
   const converted = parseInt(element);
   return converted;
 };
