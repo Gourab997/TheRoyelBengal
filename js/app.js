@@ -15,18 +15,20 @@ const showProducts = (products) => {
     div.classList.add("product");
     div.innerHTML = `
 
-      <div class="single-product m-3 card flex-fill" style="background-color: #ffffff">
-      <div>
+
+    <div class="single-product m-3 card flex-fill" style="background-color: #ffffff">
+      <div class="card-body">
     <img class="product-image" src=${image}></img>
       </div>
-      <h5>${product.title}</h5>
-      <p>Category: ${product.category}</p>
-      <h3>Price: $ ${product.price}</h3>
-      <p><i class="fas fa-star text-warning"></i> ${product.rating.rate} &nbsp &nbsp &nbsp &nbsp <i class="fas fa-user-check text-primary"></i> ${product.rating.count} </p>
+      <h5 class="card-text">${product.title}</h5>
+      <p class="card-text">Category: ${product.category}</p>
+      <h3 class="card-text">Price: $ ${product.price}</h3>
+      <p class="card-text"> <i class="fas fa-star text-warning"></i> ${product.rating.rate} &nbsp &nbsp &nbsp &nbsp <i class="fas fa-user-check text-primary"></i> ${product.rating.count} </p>
    
 
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button> <br>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
+ 
      
       `;
     document.getElementById("all-products").appendChild(div);
