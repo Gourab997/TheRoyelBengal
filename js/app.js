@@ -21,13 +21,13 @@ const showProducts = (products) => {
     <img class="product-image" src=${image}></img>
       </div>
       <h5 class="card-text">${product?.title.slice(0, 55)}</h5>
-      <p class="card-text">Category: ${product.category}</p>
-      <h3 class="card-text">Price: $ ${product.price}</h3>
+      <p class="card-text text-info fw-bold">Category: ${product.category}</p>
+      <h3 class="card-text ">Price: <span style="color: orange;"> $ ${product.price} </span></h3>
       <p class="card-text"> <i class="fas fa-star text-warning"></i> ${product.rating.rate} &nbsp &nbsp &nbsp &nbsp <i class="fas fa-user-check text-primary"></i> ${product.rating.count} </p>
    
 
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success"><i class="fas fa-cart-plus"></i> add to cart</button> <br>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button id="details-btn" class="btn btn-danger">Details <i class="fas fa-angle-double-right"></i>g</button></div>
  
      
       `;
