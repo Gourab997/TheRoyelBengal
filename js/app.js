@@ -16,17 +16,17 @@ const showProducts = (products) => {
     div.innerHTML = `
 
 
-    <div class="single-product m-3 card flex-fill" style="background-color: #ffffff">
+    <div class="single-product m-3 card flex-fill" style="background-image: linear-gradient(rgb(255, 255, 255), rgba(204, 204, 204, 0.76)) ">
       <div class="card-body">
     <img class="product-image" src=${image}></img>
       </div>
-      <h5 class="card-text">${product.title}</h5>
+      <h5 class="card-text">${product?.title.slice(0, 55)}</h5>
       <p class="card-text">Category: ${product.category}</p>
       <h3 class="card-text">Price: $ ${product.price}</h3>
       <p class="card-text"> <i class="fas fa-star text-warning"></i> ${product.rating.rate} &nbsp &nbsp &nbsp &nbsp <i class="fas fa-user-check text-primary"></i> ${product.rating.count} </p>
    
 
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button> <br>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success"><i class="fas fa-cart-plus"></i> add to cart</button> <br>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
  
      
