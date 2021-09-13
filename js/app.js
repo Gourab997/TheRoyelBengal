@@ -13,6 +13,7 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
+    //creating card
     div.innerHTML = `
 
 
@@ -35,6 +36,8 @@ const showProducts = (products) => {
   }
 };
 let count = 0;
+
+// adding cart
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
